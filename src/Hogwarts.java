@@ -1,27 +1,8 @@
 public abstract class Hogwarts {
-    private String fullName;
-    private int magicPower;
-    private int trangressionAbility;
+    String fullName;
+    int magicPower;
+    int trangressionAbility;
 
-
-    private int nobleness;
-    private int honour;
-    private int bravery;
-
-    private int hardworkness;
-    private int loyalty;
-    private int sincerity;
-
-    private int intelligence;
-    private int wisdom;
-    private int wit;
-    private int creativity;
-
-    private int trickery;
-    private int resoluteness;
-    private int ambition;
-    private int inventiveness;
-    private int lustForPower;
 
     public void compareStudents(Hogwarts studentFirst, Hogwarts studentSecond) {
         int magicSkillsOne = studentFirst.magicPower + studentFirst.trangressionAbility;
@@ -32,5 +13,35 @@ public abstract class Hogwarts {
             System.out.println(studentSecond.fullName + " обладает большей мощностью магии, чем " + studentFirst.fullName);
         } else {
             System.out.println(studentFirst.fullName + " обладает такой же мощностью магии, как и " + studentSecond.fullName);
+        }
+
+    public Hogwarts(String fullName, int magicPower, int trangressionAbility){
+            this.fullName = fullName;
+            this.magicPower = magicPower;
+            this.trangressionAbility = trangressionAbility;
+        }
+
+        public String getFullName () {
+            return fullName;
+        }
+
+        public void setFullName (String fullName){
+            this.fullName = fullName;
+        }
+
+        public int getMagicPower () {
+            return magicPower;
+        }
+
+        public void setMagicPower ( int magicPower){
+            this.magicPower = magicPower;
+        }
+
+        public int getTrangressionAbility () {
+            return trangressionAbility;
+        }
+
+        public void setTrangressionAbility ( int trangressionAbility){
+            this.trangressionAbility = trangressionAbility;
         }
 
