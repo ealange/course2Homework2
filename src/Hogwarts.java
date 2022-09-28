@@ -4,7 +4,7 @@ public abstract class Hogwarts {
     int trangressionAbility;
 
 
-    public void compareStudents(Hogwarts studentFirst, Hogwarts studentSecond) {
+    public static void compareStudents(Hogwarts studentFirst, Hogwarts studentSecond) {
         int magicSkillsOne = studentFirst.magicPower + studentFirst.trangressionAbility;
         int magicSkillsTwo = studentSecond.magicPower + studentSecond.trangressionAbility;
         if (magicSkillsOne > magicSkillsTwo) {
