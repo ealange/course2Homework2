@@ -15,19 +15,22 @@ public class Puffenduy extends Hogwarts {
         }
     }
 
-    public Puffenduy(int nobleness, int honour, int bravery) {
+    public Puffenduy(String fullname, int magicPower, int transgressionAbility, int nobleness, int honour, int bravery) {
         if (hardworkness < 0 || hardworkness > 100) {
-            throw new RuntimeException("Неверное значение hardworkness")
+            throw new RuntimeException("Неверное значение hardworkness");
         }
         if (loyalty < 0 || loyalty > 100) {
-            throw new RuntimeException("Неверное значение loyalty")
+            throw new RuntimeException("Неверное значение loyalty");
         }
         if (sincerity < 0 || sincerity > 100) {
-            throw new RuntimeException("Неверное значение sincerity")
+            throw new RuntimeException("Неверное значение sincerity");
         }
-        this.nobleness = nobleness;
-        this.honour = honour;
-        this.bravery = bravery;
+        this.fullName = fullname;
+        this.magicPower = magicPower;
+        this.transgressionAbility = transgressionAbility;
+        this.hardworkness = hardworkness;
+        this.loyalty = loyalty;
+        this.sincerity = sincerity;
     }
 
 }

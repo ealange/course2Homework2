@@ -1,4 +1,9 @@
 public class Griffindor extends Hogwarts {
+    private int nobleness;
+    private int honour;
+
+    private int bravery;
+
     public void compareCoFaculityStudents(Griffindor studentSecond) {
         int faculitySkillsOne = this.nobleness + this.honour + this.bravery;
         int faculitySkillsTwo = studentSecond.nobleness + studentSecond.honour + studentSecond.bravery;
@@ -11,26 +16,24 @@ public class Griffindor extends Hogwarts {
         }
     }
 
-    public Griffindor(int nobleness, int honour, int bravery) {
+    public Griffindor(String fullname, int magicPower, int transgressionAbility, int nobleness, int honour, int bravery) {
         if (nobleness < 0 || nobleness > 100) {
-            throw new RuntimeException("Неверное значение nobleness")
+            throw new RuntimeException("Неверное значение nobleness");
         }
         if (honour < 0 || honour > 100) {
-            throw new RuntimeException("Неверное значение honour")
+            throw new RuntimeException("Неверное значение honour");
         }
         if (bravery < 0 || bravery > 100) {
-            throw new RuntimeException("Неверное значение bravery")
+            throw new RuntimeException("Неверное значение bravery");
         }
+        this.fullName = fullname;
+        this.magicPower = magicPower;
+        this.transgressionAbility = transgressionAbility;
         this.nobleness = nobleness;
         this.honour = honour;
         this.bravery = bravery;
     }
 
-
-    private int nobleness;
-    private int honour;
-
-    private int bravery;
 
     public int getNobleness() {
         return nobleness;
@@ -55,3 +58,4 @@ public class Griffindor extends Hogwarts {
     public void setBravery(int bravery) {
         this.bravery = bravery;
     }
+}

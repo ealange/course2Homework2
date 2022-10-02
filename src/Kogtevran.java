@@ -16,19 +16,22 @@ public class Kogtevran extends Hogwarts {
         }
     }
 
-    public Kogtevran(int intelligence, int wisdom, int wit, int creativity) {
+    public Kogtevran(String fullname, int magicPower, int transgressionAbility, int intelligence, int wisdom, int wit, int creativity) {
         if (intelligence < 0 || intelligence > 100) {
-            throw new RuntimeException("Неверное значение intelligence")
+            throw new RuntimeException("Неверное значение intelligence");
         }
         if (wisdom < 0 || wisdom > 100) {
-            throw new RuntimeException("Неверное значение wisdom")
+            throw new RuntimeException("Неверное значение wisdom");
         }
         if (wit < 0 || wit > 100) {
-            throw new RuntimeException("Неверное значение wit")
+            throw new RuntimeException("Неверное значение wit");
         }
         if (creativity < 0 || creativity > 100) {
-            throw new RuntimeException("Неверное значение creativity")
+            throw new RuntimeException("Неверное значение creativity");
         }
+        this.fullName = fullname;
+        this.magicPower = magicPower;
+        this.transgressionAbility = transgressionAbility;
         this.intelligence = intelligence;
         this.wisdom = wisdom;
         this.wit = wit;

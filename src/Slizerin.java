@@ -17,22 +17,25 @@ public class Slizerin extends Hogwarts {
         }
     }
 
-    public Slizerin(int trickery, int resoluteness, int ambition, int inventiveness, int lustForPower) {
+    public Slizerin(String fullname, int magicPower, int transgressionAbility, int trickery, int resoluteness, int ambition, int inventiveness, int lustForPower) {
         if (trickery < 0 || trickery > 100) {
-            throw new RuntimeException("Неверное значение trickery")
+            throw new RuntimeException("Неверное значение trickery");
         }
         if (resoluteness < 0 || resoluteness > 100) {
-            throw new RuntimeException("Неверное значение resoluteness")
+            throw new RuntimeException("Неверное значение resoluteness");
         }
         if (ambition < 0 || ambition > 100) {
-            throw new RuntimeException("Неверное значение ambition")
+            throw new RuntimeException("Неверное значение ambition");
         }
         if (inventiveness < 0 || inventiveness > 100) {
-            throw new RuntimeException("Неверное значение inventiveness")
+            throw new RuntimeException("Неверное значение inventiveness");
         }
         if (lustForPower < 0 || lustForPower > 100) {
-            throw new RuntimeException("Неверное значение lustForPower")
+            throw new RuntimeException("Неверное значение lustForPower");
         }
+        this.fullName = fullname;
+        this.magicPower = magicPower;
+        this.transgressionAbility = transgressionAbility;
         this.trickery = trickery;
         this.resoluteness = resoluteness;
         this.ambition = ambition;
