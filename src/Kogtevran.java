@@ -29,13 +29,25 @@ public class Kogtevran extends Hogwarts {
         if (creativity < 0 || creativity > 100) {
             throw new RuntimeException("Неверное значение creativity");
         }
-        this.fullName = fullname;
-        this.magicPower = magicPower;
-        this.transgressionAbility = transgressionAbility;
+        super.fullName = fullname;
+        super.magicPower = magicPower;
+        super.transgressionAbility = transgressionAbility;
         this.intelligence = intelligence;
         this.wisdom = wisdom;
         this.wit = wit;
         this.creativity = creativity;
+    }
+
+    @Override
+    public String toString() {
+        return "Kogtevran{ " + fullName + ": " +
+                "intelligence=" + intelligence +
+                ", wisdom=" + wisdom +
+                ", wit=" + wit +
+                ", creativity=" + creativity +
+                ", magicPower=" + magicPower +
+                ", transgressionAbility=" + transgressionAbility +
+                '}';
     }
 
     public int getIntelligence() {

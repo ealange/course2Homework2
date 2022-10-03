@@ -15,7 +15,7 @@ public class Puffenduy extends Hogwarts {
         }
     }
 
-    public Puffenduy(String fullname, int magicPower, int transgressionAbility, int nobleness, int honour, int bravery) {
+    public Puffenduy(String fullname, int magicPower, int transgressionAbility, int hardworkness, int loyalty, int sincerity) {
         if (hardworkness < 0 || hardworkness > 100) {
             throw new RuntimeException("Неверное значение hardworkness");
         }
@@ -25,12 +25,46 @@ public class Puffenduy extends Hogwarts {
         if (sincerity < 0 || sincerity > 100) {
             throw new RuntimeException("Неверное значение sincerity");
         }
-        this.fullName = fullname;
-        this.magicPower = magicPower;
-        this.transgressionAbility = transgressionAbility;
+        super.fullName = fullname;
+        super.magicPower = magicPower;
+        super.transgressionAbility = transgressionAbility;
         this.hardworkness = hardworkness;
         this.loyalty = loyalty;
         this.sincerity = sincerity;
     }
 
+    @Override
+    public String toString() {
+        return "Puffenduy{ " + fullName + ": " +
+                "hardworkness=" + hardworkness +
+                ", loyalty=" + loyalty +
+                ", sincerity=" + sincerity +
+                ", magicPower=" + magicPower +
+                ", transgressionAbility=" + transgressionAbility +
+                '}';
+    }
+
+    public int getHardworkness() {
+        return hardworkness;
+    }
+
+    public void setHardworkness(int hardworkness) {
+        this.hardworkness = hardworkness;
+    }
+
+    public int getLoyalty() {
+        return loyalty;
+    }
+
+    public void setLoyalty(int loyalty) {
+        this.loyalty = loyalty;
+    }
+
+    public int getSincerity() {
+        return sincerity;
+    }
+
+    public void setSincerity(int sincerity) {
+        this.sincerity = sincerity;
+    }
 }

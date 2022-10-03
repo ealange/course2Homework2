@@ -1,7 +1,7 @@
 public abstract class Hogwarts {
-    String fullName;
-    int magicPower;
-    int transgressionAbility;
+    protected String fullName;
+    protected int magicPower;
+    protected int transgressionAbility;
 
 
     public static void compareStudents(Hogwarts studentFirst, Hogwarts studentSecond) {
@@ -14,12 +14,6 @@ public abstract class Hogwarts {
         } else {
             System.out.println(studentFirst.fullName + " обладает такой же мощностью магии, как и " + studentSecond.fullName);
         }
-    }
-
-    public Hogwarts(String fullName, int magicPower, int transgressionAbility) {
-        this.fullName = fullName;
-        this.magicPower = magicPower;
-        this.transgressionAbility = transgressionAbility;
     }
 
     public String getFullName() {
@@ -35,6 +29,9 @@ public abstract class Hogwarts {
     }
 
     public void setMagicPower(int magicPower) {
+        if (magicPower < 0 || magicPower > 100) {
+            throw new RuntimeException("введено неверное значение magicPower");
+        }
         this.magicPower = magicPower;
     }
 
@@ -43,6 +40,9 @@ public abstract class Hogwarts {
     }
 
     public void setTransgressionAbility(int transgressionAbility) {
+        if (transgressionAbility < 0 || transgressionAbility > 100) {
+            throw new RuntimeException("введено неверное значение transgressionAbility");
+        }
         this.transgressionAbility = transgressionAbility;
     }
 

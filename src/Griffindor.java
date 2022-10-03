@@ -26,14 +26,24 @@ public class Griffindor extends Hogwarts {
         if (bravery < 0 || bravery > 100) {
             throw new RuntimeException("Неверное значение bravery");
         }
-        this.fullName = fullname;
-        this.magicPower = magicPower;
-        this.transgressionAbility = transgressionAbility;
+        super.fullName = fullname;
+        super.magicPower = magicPower;
+        super.transgressionAbility = transgressionAbility;
         this.nobleness = nobleness;
         this.honour = honour;
         this.bravery = bravery;
     }
 
+    @Override
+    public String toString() {
+        return "Griffindor{ " + fullName + ": " +
+                "nobleness=" + nobleness +
+                ", honour=" + honour +
+                ", bravery=" + bravery +
+                ", magicPower=" + magicPower +
+                ", transgressionAbility=" + transgressionAbility +
+                '}';
+    }
 
     public int getNobleness() {
         return nobleness;

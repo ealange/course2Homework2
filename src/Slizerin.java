@@ -33,9 +33,9 @@ public class Slizerin extends Hogwarts {
         if (lustForPower < 0 || lustForPower > 100) {
             throw new RuntimeException("Неверное значение lustForPower");
         }
-        this.fullName = fullname;
-        this.magicPower = magicPower;
-        this.transgressionAbility = transgressionAbility;
+        super.fullName = fullname;
+        super.magicPower = magicPower;
+        super.transgressionAbility = transgressionAbility;
         this.trickery = trickery;
         this.resoluteness = resoluteness;
         this.ambition = ambition;
@@ -43,6 +43,18 @@ public class Slizerin extends Hogwarts {
         this.lustForPower = lustForPower;
     }
 
+    @Override
+    public String toString() {
+        return "Slizerin{ " + fullName + ": " +
+                "trickery=" + trickery +
+                ", resoluteness=" + resoluteness +
+                ", ambition=" + ambition +
+                ", inventiveness=" + inventiveness +
+                ", lustForPower=" + lustForPower +
+                ", magicPower=" + magicPower +
+                ", transgressionAbility=" + transgressionAbility +
+                '}';
+    }
 
     public int getTrickery() {
         return trickery;
